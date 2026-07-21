@@ -4,801 +4,1160 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kenza — Private Capital for Real Estate</title>
-<meta name="description" content="Kenza provides bespoke private capital solutions for UK and international real estate transactions, combining institutional senior funding with flexible family office[...]
+<meta name="description" content="Kenza provides bespoke private capital solutions for UK and international real estate transactions, combining institutional senior funding with flexible family office capital.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="[...]
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#0A192F;
-    --navy-deep:#061020;
-    --green:#004225;
-    --green-light:#0C5A38;
-    --sand:#E3DCD2;
-    --sand-deep:#D6CCBB;
-    --white:#FFFFFF;
-    --ink:#1B2431;
-    --ink-soft:#4C5568;
-    --line:rgba(10,25,47,0.13);
-    --line-on-navy:rgba(227,220,210,0.18);
-    --serif:'Fraunces', Georgia, serif;
-    --sans:'Inter', -apple-system, sans-serif;
-    --mono:'JetBrains Mono', monospace;
+  :root {
+    --navy: #0A192F;
+    --navy-deep: #061020;
+    --green: #004225;
+    --green-light: #0C5A38;
+    --sand: #E3DCD2;
+    --sand-deep: #D6CCBB;
+    --white: #FFFFFF;
+    --ink: #1B2431;
+    --ink-soft: #4C5568;
+    --line: rgba(10, 25, 47, 0.13);
+    --line-on-navy: rgba(227, 220, 210, 0.18);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
   }
 
-  *{margin:0;padding:0;box-sizing:border-box;}
-
-  html{scroll-behavior:smooth;}
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  body{
-    font-family:var(--sans);
-    color:var(--ink);
-    background:var(--white);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
+  html {
+    scroll-behavior: smooth;
   }
 
-  a{color:inherit; text-decoration:none;}
-  ul{list-style:none;}
-
-  img,svg{display:block; max-width:100%;}
-
-  :focus-visible{
-    outline:2px solid var(--green);
-    outline-offset:3px;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
-  .wrap{
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 40px;
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:11.5px;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    font-weight:500;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
   /* ---------- NAV ---------- */
-  header{
-    position:fixed;
-    top:0; left:0; right:0;
-    z-index:100;
-    padding:26px 0;
-    transition:padding .35s ease, background .35s ease, border-color .35s ease;
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 26px 0;
+    transition: padding 0.35s ease, background 0.35s ease, border-color 0.35s ease;
   }
-  header.scrolled{
-    padding:16px 0;
-    background:rgba(10,25,47,0.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line-on-navy);
-  }
-  header .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    font-family:var(--serif);
-    font-size:21px;
-    font-weight:500;
-    letter-spacing:0.01em;
-    color:var(--white);
-  }
-  .brand .mark{width:40px; height:40px; flex-shrink:0; object-fit:contain;}
-  nav.primary-nav ul{
-    display:flex;
-    gap:38px;
-  }
-  nav.primary-nav a{
-    color:var(--sand);
-    font-size:14.5px;
-    font-weight:500;
-    position:relative;
-    padding-bottom:4px;
-  }
-  nav.primary-nav a::after{
-    content:'';
-    position:absolute;
-    left:0; bottom:0;
-    width:0%; height:1px;
-    background:var(--sand);
-    transition:width .3s ease;
-  }
-  nav.primary-nav a:hover::after{width:100%;}
-.nav-cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:40px;
-  padding:0 22px;
-  border:1px solid var(--line-on-navy);
-  border-radius:2px;
-  color:var(--white) !important;
-  font-size:14px;
-  font-weight:500;
-  line-height:1;
-  transition:border-color .3s ease, background .3s ease;
-}
-  .nav-cta:hover{background:var(--green); border-color:var(--green);}
-  .nav-cta::after{display:none;}
-  .nav-links-inline{display:flex; align-items:center; gap:20px;}
 
-  .menu-toggle{display:none;}
+  header.scrolled {
+    padding: 16px 0;
+    background: rgba(10, 25, 47, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--white);
+  }
+
+  .brand .mark {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  nav.primary-nav ul {
+    display: flex;
+    gap: 38px;
+  }
+
+  nav.primary-nav a {
+    color: var(--sand);
+    font-size: 14.5px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  nav.primary-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--sand);
+    transition: width 0.3s ease;
+  }
+
+  nav.primary-nav a:hover::after {
+    width: 100%;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 22px;
+    border: 1px solid var(--line-on-navy);
+    border-radius: 2px;
+    color: var(--white) !important;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .nav-cta:hover {
+    background: var(--green);
+    border-color: var(--green);
+  }
+
+  .nav-cta::after {
+    display: none;
+  }
+
+  .nav-links-inline {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
 
   /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    min-height:100vh;
-    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
-    color:var(--white);
-    overflow:hidden;
-    display:flex;
-    align-items:center;
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--white);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
   }
-  .hero-arch{
-    position:absolute;
-    right:-6%;
-    top:50%;
-    transform:translateY(-46%);
-    width:min(56vw, 780px);
-    opacity:0.9;
+
+  .hero-arch {
+    position: absolute;
+    right: -6%;
+    top: 50%;
+    transform: translateY(-46%);
+    width: min(56vw, 780px);
+    opacity: 0.9;
   }
-  .hero .wrap{
-    position:relative;
-    z-index:2;
-    width:100%;
-    padding-top:120px;
-    padding-bottom:90px;
+
+  .hero .wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 90px;
   }
-  .hero-eyebrow{
-    color:var(--sand);
-    opacity:0;
-    animation:riseIn .9s ease forwards;
-    animation-delay:.15s;
+
+  .hero-eyebrow {
+    color: var(--sand);
+    opacity: 0;
+    animation: riseIn 0.9s ease forwards;
+    animation-delay: 0.15s;
   }
-  h1.hero-head{
-    font-family:var(--serif);
-    font-weight:400;
-    font-size:clamp(40px, 6vw, 74px);
-    line-height:1.06;
-    letter-spacing:-0.01em;
-    max-width:760px;
-    margin:26px 0 30px;
-    opacity:0;
-    animation:riseIn .9s ease forwards;
-    animation-delay:.32s;
+
+  h1.hero-head {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 74px);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    max-width: 760px;
+    margin: 26px 0 30px;
+    opacity: 0;
+    animation: riseIn 0.9s ease forwards;
+    animation-delay: 0.32s;
   }
-  h1.hero-head em{
-    font-style:italic;
-    color:var(--sand);
+
+  h1.hero-head em {
+    font-style: italic;
+    color: var(--sand);
   }
-  .hero-sub{
-    max-width:480px;
-    font-size:17px;
-    line-height:1.65;
-    color:rgba(227,220,210,0.86);
-    opacity:0;
-    animation:riseIn .9s ease forwards;
-    animation-delay:.5s;
+
+  .hero-sub {
+    max-width: 480px;
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(227, 220, 210, 0.86);
+    opacity: 0;
+    animation: riseIn 0.9s ease forwards;
+    animation-delay: 0.5s;
   }
-  .hero-scroll{
-    position:absolute;
-    left:40px;
-    bottom:44px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:var(--sand);
-    font-family:var(--mono);
-    font-size:11px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    opacity:0;
-    animation:riseIn .9s ease forwards;
-    animation-delay:.85s;
+
+  .hero-scroll {
+    position: absolute;
+    left: 40px;
+    bottom: 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--sand);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: riseIn 0.9s ease forwards;
+    animation-delay: 0.85s;
   }
-  .hero-scroll .stem{
-    width:1px; height:34px;
-    background:var(--line-on-navy);
-    position:relative;
-    overflow:hidden;
+
+  .hero-scroll .stem {
+    width: 1px;
+    height: 34px;
+    background: var(--line-on-navy);
+    position: relative;
+    overflow: hidden;
   }
-  .hero-scroll .stem::after{
-    content:'';
-    position:absolute;
-    top:-100%; left:0; right:0; height:100%;
-    background:var(--sand);
-    animation:stemDrop 2.2s ease-in-out infinite;
+
+  .hero-scroll .stem::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: var(--sand);
+    animation: stemDrop 2.2s ease-in-out infinite;
   }
-  @keyframes stemDrop{
-    0%{top:-100%;} 60%{top:100%;} 100%{top:100%;}
+
+  @keyframes stemDrop {
+    0% {
+      top: -100%;
+    }
+    60% {
+      top: 100%;
+    }
+    100% {
+      top: 100%;
+    }
   }
-  @keyframes riseIn{
-    from{opacity:0; transform:translateY(16px);}
-    to{opacity:1; transform:translateY(0);}
+
+  @keyframes riseIn {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* ---------- SECTION SHELL ---------- */
-  section{padding:118px 0;}
-  .section-head{
-    display:grid;
-    grid-template-columns:1fr 1.15fr;
-    gap:60px;
-    margin-bottom:64px;
-    align-items:end;
-  }
-  .section-head .eyebrow{color:var(--green); margin-bottom:18px; display:block;}
-  .section-head h2{
-    font-family:var(--serif);
-    font-weight:400;
-    font-size:clamp(30px,3.6vw,42px);
-    line-height:1.18;
-    color:var(--navy);
-  }
-  .section-head p{
-    font-size:16px;
-    color:var(--ink-soft);
-    line-height:1.7;
-    padding-bottom:4px;
+  section {
+    padding: 118px 0;
   }
 
-  .reveal{
-    opacity:0;
-    transform:translateY(22px);
-    transition:opacity .8s ease, transform .8s ease;
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 60px;
+    margin-bottom: 64px;
+    align-items: end;
   }
-  .reveal.is-visible{opacity:1; transform:translateY(0);}
+
+  .section-head .eyebrow {
+    color: var(--green);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .section-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 3.6vw, 42px);
+    line-height: 1.18;
+    color: var(--navy);
+  }
+
+  .section-head p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    padding-bottom: 4px;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   /* ---------- POSITIONING ---------- */
-  .positioning{background:var(--white);}
-  .positioning .wrap{
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-    gap:80px;
-    align-items:start;
+  .positioning {
+    background: var(--white);
   }
-  .positioning .rule{
-    width:44px; height:2px; background:var(--green); margin-bottom:28px;
+
+  .positioning .wrap {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
   }
-  .positioning blockquote{
-    font-family:var(--serif);
-    font-weight:400;
-    font-size:clamp(26px,3vw,36px);
-    line-height:1.3;
-    color:var(--navy);
+
+  .positioning .rule {
+    width: 44px;
+    height: 2px;
+    background: var(--green);
+    margin-bottom: 28px;
   }
-  .positioning .body-col p{
-    font-size:16px;
-    line-height:1.85;
-    color:var(--ink-soft);
-    margin-bottom:20px;
+
+  .positioning blockquote {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.3;
+    color: var(--navy);
   }
-  .positioning .body-col p:last-child{margin-bottom:0;}
-  .positioning .body-col strong{color:var(--navy); font-weight:600;}
+
+  .positioning .body-col p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+  }
+
+  .positioning .body-col p:last-child {
+    margin-bottom: 0;
+  }
+
+  .positioning .body-col strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
 
   /* ---------- CAPITAL SOLUTIONS ---------- */
-  .solutions{background:var(--sand);}
-  .solutions-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1px;
-    background:var(--sand-deep);
-    border:1px solid var(--sand-deep);
+  .solutions {
+    background: var(--sand);
   }
-  .solution-card{
-    background:var(--sand);
-    padding:42px 30px 36px;
-    display:flex;
-    flex-direction:column;
-    gap:22px;
-    transition:background .35s ease;
+
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--sand-deep);
+    border: 1px solid var(--sand-deep);
   }
-  .solution-card:hover{background:var(--white);}
-  .solution-card .icon{width:38px; height:38px;}
-  .solution-card h3{
-    font-family:var(--serif);
-    font-weight:500;
-    font-size:21px;
-    color:var(--navy);
+
+  .solution-card {
+    background: var(--sand);
+    padding: 42px 30px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    transition: background 0.35s ease;
   }
-  .solution-card p{
-    font-size:14.5px;
-    line-height:1.7;
-    color:var(--ink-soft);
+
+  .solution-card:hover {
+    background: var(--white);
   }
-  .solution-card .tag{
-    margin-top:auto;
-    font-family:var(--mono);
-    font-size:10.5px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--green);
+
+  .solution-card .icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .solution-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 21px;
+    color: var(--navy);
+  }
+
+  .solution-card p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  .solution-card .tag {
+    margin-top: auto;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
   }
 
   /* ---------- APPROACH ---------- */
-  .approach{background:var(--navy); color:var(--white);}
-  .approach .section-head .eyebrow{color:var(--sand);}
-  .approach .section-head h2{color:var(--white);}
-  .approach .section-head p{color:rgba(227,220,210,0.75);}
-  .stages{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:0;
-    border-top:1px solid var(--line-on-navy);
+  .approach {
+    background: var(--navy);
+    color: var(--white);
   }
-  .stage{
-    padding:36px 28px 0;
-    border-right:1px solid var(--line-on-navy);
+
+  .approach .section-head .eyebrow {
+    color: var(--sand);
   }
-  .stage:last-child{border-right:none;}
-  .stage .num{
-    font-family:var(--mono);
-    font-size:12px;
-    color:var(--sand);
-    opacity:.7;
-    display:block;
-    margin-bottom:20px;
+
+  .approach .section-head h2 {
+    color: var(--white);
   }
-  .stage h4{
-    font-family:var(--serif);
-    font-weight:500;
-    font-size:19px;
-    margin-bottom:12px;
+
+  .approach .section-head p {
+    color: rgba(227, 220, 210, 0.75);
   }
-  .stage p{
-    font-size:14px;
-    line-height:1.7;
-    color:rgba(227,220,210,0.72);
+
+  .stages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line-on-navy);
+  }
+
+  .stage {
+    padding: 36px 28px 0;
+    border-right: 1px solid var(--line-on-navy);
+  }
+
+  .stage:last-child {
+    border-right: none;
+  }
+
+  .stage .num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--sand);
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .stage h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 19px;
+    margin-bottom: 12px;
+  }
+
+  .stage p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(227, 220, 210, 0.72);
   }
 
   /* ---------- WHY KENZA ---------- */
-  .why{background:var(--white);}
-  .why .wrap{
-    display:grid;
-    grid-template-columns:0.85fr 1.15fr;
-    gap:80px;
+  .why {
+    background: var(--white);
   }
-  .why-list{display:flex; flex-direction:column;}
-  .why-item{
-    display:grid;
-    grid-template-columns:52px 1fr;
-    gap:24px;
-    padding:26px 0;
-    border-top:1px solid var(--line);
+
+  .why .wrap {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 80px;
   }
-  .why-item:last-child{border-bottom:1px solid var(--line);}
-  .why-item .icon{width:24px; height:24px; margin-top:4px;}
-  .why-item h4{
-    font-family:var(--serif);
-    font-weight:500;
-    font-size:18px;
-    color:var(--navy);
-    margin-bottom:6px;
+
+  .why-list {
+    display: flex;
+    flex-direction: column;
   }
-  .why-item p{
-    font-size:14.5px;
-    color:var(--ink-soft);
-    line-height:1.65;
+
+  .why-item {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 24px;
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .why-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .why-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+  }
+
+  .why-item h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .why-item p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.65;
   }
 
   /* ---------- COMPANY / CONTACT ---------- */
-  .close{
-    background:var(--sand);
-    position:relative;
-    overflow:hidden;
+  .close {
+    background: var(--sand);
+    position: relative;
+    overflow: hidden;
   }
-  .close .wrap{
-    position:relative;
-    z-index:2;
-    display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:70px;
-    align-items:center;
+
+  .close .wrap {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
   }
-  .close h2{
-    font-family:var(--serif);
-    font-weight:400;
-    font-size:clamp(30px,3.8vw,44px);
-    line-height:1.16;
-    color:var(--navy);
-    margin-bottom:22px;
+
+  .close h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 3.8vw, 44px);
+    line-height: 1.16;
+    color: var(--navy);
+    margin-bottom: 22px;
   }
-  .close p{
-    font-size:16px;
-    color:var(--ink-soft);
-    line-height:1.75;
-    max-width:460px;
+
+  .close p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    max-width: 460px;
   }
-  .contact-card{
-    background:var(--navy);
-    color:var(--white);
-    padding:44px 40px;
-    border-radius:2px;
+
+  .contact-card {
+    background: var(--navy);
+    color: var(--white);
+    padding: 44px 40px;
+    border-radius: 2px;
   }
-  .contact-card .eyebrow{color:var(--sand); margin-bottom:20px; display:block;}
-  .contact-card a.email{
-    font-family:var(--serif);
-    font-size:24px;
-    display:inline-block;
-    margin-bottom:26px;
-    border-bottom:1px solid var(--line-on-navy);
-    padding-bottom:6px;
-    transition:border-color .3s ease;
+
+  .contact-card .eyebrow {
+    color: var(--sand);
+    margin-bottom: 20px;
+    display: block;
   }
-  .contact-card a.email:hover{border-color:var(--sand);}
-  .contact-card p{
-    font-size:14px;
-    line-height:1.7;
-    color:rgba(227,220,210,0.75);
+
+  .contact-card a.email {
+    font-family: var(--serif);
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 26px;
+    border-bottom: 1px solid var(--line-on-navy);
+    padding-bottom: 6px;
+    transition: border-color 0.3s ease;
+  }
+
+  .contact-card a.email:hover {
+    border-color: var(--sand);
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(227, 220, 210, 0.75);
   }
 
   /* ---------- FOOTER ---------- */
-  footer{
-    background:var(--navy-deep);
-    color:rgba(227,220,210,0.72);
-    padding:70px 0 34px;
-  }
-  .footer-top{
-    display:grid;
-    grid-template-columns:1.3fr repeat(3,0.85fr);
-    gap:40px;
-    padding-bottom:54px;
-    border-bottom:1px solid var(--line-on-navy);
-  }
-  .footer-brand .brand{margin-bottom:16px;}
-  .footer-brand .brand .mark{width:40px; height:40px;}
-  .footer-brand p{
-    font-size:13.5px;
-    line-height:1.7;
-    color:rgba(227,220,210,0.6);
-    max-width:280px;
-  }
-  .footer-col h5{
-    font-family:var(--mono);
-    font-size:11px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--sand);
-    margin-bottom:18px;
-  }
-  .footer-col ul li{margin-bottom:11px;}
-  .footer-col a{
-    font-size:14px;
-    color:rgba(227,220,210,0.72);
-    transition:color .25s ease;
-  }
-  .footer-col a:hover{color:var(--white);}
-  .footer-bottom{
-    padding-top:30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:40px;
-    flex-wrap:wrap;
-  }
-  .footer-legal{
-    font-size:12px;
-    line-height:1.7;
-    color:rgba(227,220,210,0.42);
-    max-width:720px;
-  }
-  .footer-copy{
-    font-size:12px;
-    color:rgba(227,220,210,0.42);
-    white-space:nowrap;
+  footer {
+    background: var(--navy-deep);
+    color: rgba(227, 220, 210, 0.72);
+    padding: 70px 0 34px;
   }
 
-  .mobile-panel{display:none;}
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.3fr repeat(3, 0.85fr);
+    gap: 40px;
+    padding-bottom: 54px;
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+
+  .footer-brand .brand {
+    margin-bottom: 16px;
+  }
+
+  .footer-brand .brand .mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-brand p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: rgba(227, 220, 210, 0.6);
+    max-width: 280px;
+  }
+
+  .footer-col h5 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-bottom: 18px;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 11px;
+  }
+
+  .footer-col a {
+    font-size: 14px;
+    color: rgba(227, 220, 210, 0.72);
+    transition: color 0.25s ease;
+  }
+
+  .footer-col a:hover {
+    color: var(--white);
+  }
+
+  .footer-bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .footer-legal {
+    font-size: 12px;
+    line-height: 1.7;
+    color: rgba(227, 220, 210, 0.42);
+    max-width: 720px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(227, 220, 210, 0.42);
+    white-space: nowrap;
+  }
+
+  .mobile-panel {
+    display: none;
+  }
 
   /* ---------- RESPONSIVE ---------- */
-  @media (max-width:900px){
-    .wrap{padding:0 24px;}
-    nav.primary-nav{display:none;}
-    .menu-toggle{
-      display:flex; align-items:center; justify-content:center;
-      width:38px; height:38px; background:none; border:1px solid var(--line-on-navy);
-      border-radius:2px; cursor:pointer;
+  @media (max-width: 900px) {
+    .wrap {
+      padding: 0 24px;
     }
-    .menu-toggle span{display:block; width:16px; height:1px; background:var(--sand); position:relative;}
-    .menu-toggle span::before,.menu-toggle span::after{content:'';position:absolute;left:0;width:16px;height:1px;background:var(--sand);}
-    .menu-toggle span::before{top:-5px;} .menu-toggle span::after{top:5px;}
-    .mobile-panel{
-      position:fixed; inset:0; background:var(--navy);
-      display:flex; flex-direction:column; justify-content:center; gap:28px;
-      padding:40px; transform:translateY(-100%); transition:transform .4s ease;
-      z-index:99;
+
+    nav.primary-nav {
+      display: none;
     }
-    .mobile-panel.open{transform:translateY(0);}
-    .mobile-panel a{font-family:var(--serif); font-size:28px; color:var(--white);}
-    .mobile-panel .close-x{
-      position:absolute; top:26px; right:24px; width:38px; height:38px;
-      border:1px solid var(--line-on-navy); border-radius:2px;
-      display:flex; align-items:center; justify-content:center;
-      color:var(--sand); font-size:20px; cursor:pointer; background:none;
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: none;
+      border: 1px solid var(--line-on-navy);
+      border-radius: 2px;
+      cursor: pointer;
     }
-    .hero-arch{width:80vw; right:-30%; opacity:.55;}
-    .section-head{grid-template-columns:1fr; gap:20px;}
-    .positioning .wrap{grid-template-columns:1fr; gap:40px;}
-    .solutions-grid{grid-template-columns:repeat(2,1fr);}
-    .stages{grid-template-columns:repeat(2,1fr);}
-    .stage{border-bottom:1px solid var(--line-on-navy); padding-bottom:30px; margin-bottom:6px;}
-    .why .wrap{grid-template-columns:1fr; gap:36px;}
-    .close .wrap{grid-template-columns:1fr; gap:40px;}
-    .footer-top{grid-template-columns:1fr 1fr; gap:36px;}
-    .footer-bottom{flex-direction:column;}
-    section{padding:80px 0;}
+
+    .menu-toggle span {
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: var(--sand);
+      position: relative;
+    }
+
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--sand);
+    }
+
+    .menu-toggle span::before {
+      top: -5px;
+    }
+
+    .menu-toggle span::after {
+      top: 5px;
+    }
+
+    .mobile-panel {
+      position: fixed;
+      inset: 0;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+      padding: 40px;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+      z-index: 99;
+    }
+
+    .mobile-panel.open {
+      transform: translateY(0);
+    }
+
+    .mobile-panel a {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--white);
+    }
+
+    .mobile-panel .close-x {
+      position: absolute;
+      top: 26px;
+      right: 24px;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line-on-navy);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sand);
+      font-size: 20px;
+      cursor: pointer;
+      background: none;
+    }
+
+    .hero-arch {
+      width: 80vw;
+      right: -30%;
+      opacity: 0.55;
+    }
+
+    .section-head {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .positioning .wrap {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .solutions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stages {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stage {
+      border-bottom: 1px solid var(--line-on-navy);
+      padding-bottom: 30px;
+      margin-bottom: 6px;
+    }
+
+    .why .wrap {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .close .wrap {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+    }
+
+    section {
+      padding: 80px 0;
+    }
   }
-  @media (max-width:520px){
-    .solutions-grid{grid-template-columns:1fr;}
-    .stages{grid-template-columns:1fr;}
-    .footer-top{grid-template-columns:1fr;}
+
+  @media (max-width: 520px) {
+    .solutions-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stages {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>
+
 <body>
-
-<header id="siteHeader">
-  <div class="wrap">
-    <a href="#top" class="brand">
-      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAD9CAYAAACCy/pMAADhKklEQVR42uz9d7hl2VUfiv7GXGvvkyuc6qrqquoclCUkkIgCBL5gskkSl2gThAx8FjaPaBMECIy5XJIJFphsHiBhMhgwNpJRz[...]
-      Kenza Capital
-    </a>
-    <nav class="primary-nav">
-      <ul class="nav-links-inline">
-        <li><a href="#solutions">Capital Solutions</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#why">Why Kenza</a></li>
-        <li><a href="#company">Company</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
-  </div>
-</header>
-
-<div class="mobile-panel" id="mobilePanel">
-  <button class="close-x" id="closePanel" aria-label="Close menu">&times;</button>
-  <a href="#solutions">Capital Solutions</a>
-  <a href="#approach">Approach</a>
-  <a href="#why">Why Kenza</a>
-  <a href="#company">Company</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<main id="top">
-
-  <section class="hero">
-    <svg class="hero-arch" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M120 560 V260 A180 180 0 0 1 480 260 V560" stroke="#E3DCD2" stroke-opacity="0.16" stroke-width="1"/>
-      <path d="M170 560 V260 A130 130 0 0 1 430 260 V560" stroke="#E3DCD2" stroke-opacity="0.22" stroke-width="1"/>
-      <path d="M220 560 V262 A80 80 0 0 1 380 262 V560" stroke="#004225" stroke-opacity="0.55" stroke-width="1.4"/>
-      <line x1="300" y1="180" x2="300" y2="560" stroke="#E3DCD2" stroke-opacity="0.1" stroke-width="1"/>
-      <circle cx="300" cy="182" r="3" fill="#E3DCD2" fill-opacity="0.4"/>
-    </svg>
+  <header id="siteHeader">
     <div class="wrap">
-      <span class="eyebrow hero-eyebrow">Private Capital for Real Estate</span>
-      <h1 class="hero-head">Structured finance<br>for real estate.</h1>
-      <p class="hero-sub">Kenza combines institutional senior funding with flexible family office and private capital — structured for certainty of execution on UK and international transaction[...]
-    </div>
-    <div class="hero-scroll"><span>Our Approach</span><span class="stem"></span></div>
-  </section>
-
-  <section class="positioning" id="company">
-    <div class="wrap">
-      <div class="quote-col reveal">
-        <div class="rule"></div>
-        <blockquote>Private banking discipline, applied to real estate.</blockquote>
-      </div>
-      <div class="body-col reveal">
-        <p>Kenza is a specialist private capital business built around <strong>complex, non-standard and time-sensitive</strong> real estate transactions. We work closely with institutional lende[...]
-        <p>Our team brings significant real estate finance and structuring experience to every transaction. We operate quietly and directly — relationship-led rather than platform-led, and buil[...]
-      </div>
-    </div>
-  </section>
-
-  <section class="solutions" id="solutions">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="reveal">
-          <span class="eyebrow">Capital Solutions</span>
-          <h2>Structured across the capital stack.</h2>
-        </div>
-        <p class="reveal">Each solution can stand alone or combine into a single whole-loan facility — matched to the shape, timeline and complexity of the transaction.</p>
-      </div>
-      <div class="solutions-grid reveal">
-        <div class="solution-card">
-          <svg class="icon" viewBox="0 0 40 40" fill="none"><path d="M12 32V12L20 20V32" stroke="#004225" stroke-width="1.4"/><path d="M28 32V12L20 20" stroke="#0A192F" stroke-width="1.4"/></svg>
-          <h3>Whole Loan</h3>
-          <p>A single, unified facility combining senior and junior debt — structured to support larger and more complex schemes without layered lenders.</p>
-          <span class="tag">Senior + Junior</span>
-        </div>
-        <div class="solution-card">
-          <svg class="icon" viewBox="0 0 40 40" fill="none"><rect x="10" y="10" width="20" height="20" stroke="#004225" stroke-width="1.4"/><line x1="10" y1="20" x2="30" y2="20" stroke="#0A192F" [...]
-          <h3>Mezzanine</h3>
-          <p>Flexible top-up capital positioned behind senior debt — reducing the equity contribution required while preserving control of the transaction.</p>
-          <span class="tag">Top-up Capital</span>
-        </div>
-        <div class="solution-card">
-          <svg class="icon" viewBox="0 0 40 40" fill="none"><path d="M10 30 L20 10 L30 30" stroke="#004225" stroke-width="1.4" stroke-linejoin="round"/><line x1="14" y1="22" x2="26" y2="22" strok[...]
-          <h3>Bridge</h3>
-          <p>Short-term senior and junior funding for acquisition, refinancing or conversion — structured for pace as much as precision.</p>
-          <span class="tag">Short-term</span>
-        </div>
-        <div class="solution-card">
-          <svg class="icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="#004225" stroke-width="1.4"/><path d="M20 14V20L24 24" stroke="#0A192F" stroke-width="1.4"/></sv[...]
-          <h3>Stabilisation &amp; Exit</h3>
-          <p>Capital for completed or near-complete schemes that need time and structure to optimise value ahead of refinancing or sale.</p>
-          <span class="tag">Finish &amp; Exit</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="approach" id="approach">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="reveal">
-          <span class="eyebrow">How We Work</span>
-          <h2>A direct, disciplined process.</h2>
-        </div>
-        <p class="reveal">Four stages, one point of accountability — from the first conversation to a completed transaction.</p>
-      </div>
-      <div class="stages reveal">
-        <div class="stage">
-          <span class="num">01</span>
-          <h4>Origination</h4>
-          <p>Direct, relationship-led conversations with developers, sponsors and advisers.</p>
-        </div>
-        <div class="stage">
-          <span class="num">02</span>
-          <h4>Structuring</h4>
-          <p>Combining institutional and private capital into a single, whole-loan solution.</p>
-        </div>
-        <div class="stage">
-          <span class="num">03</span>
-          <h4>Execution</h4>
-          <p>Decisive underwriting, built for complex and time-sensitive transactions.</p>
-        </div>
-        <div class="stage">
-          <span class="num">04</span>
-          <h4>Delivery</h4>
-          <p>Hands-on oversight through to completion, with discretion throughout.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why" id="why">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow" style="color:var(--green); display:block; margin-bottom:18px;">Why Kenza</span>
-        <h2 style="font-family:var(--serif); font-weight:400; font-size:clamp(28px,3.4vw,38px); line-height:1.2; color:var(--navy);">Quiet confidence, not visual noise.</h2>
-      </div>
-      <div class="why-list reveal">
-        <div class="why-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#004225" stroke-width="1.4"/><path d="M9 12l2 2 4-4" stroke="#004225" stroke-width="1.4"/></svg>
-          <div><h4>Certainty of execution</h4><p>A single point of accountability, structured to remove complexity rather than add to it.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 18V6h16v12" stroke="#004225" stroke-width="1.4"/><path d="M4 18h16" stroke="#0A192F" stroke-width="1.4"/></svg>
-          <div><h4>Institutional and private capital, combined</h4><p>Senior institutional funding alongside flexible family office and private capital, in one facility.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke="#004225" stroke-width="1.4"/></svg>
-          <div><h4>Relationship-led, discreet</h4><p>We work directly with developers, sponsors and advisers — not through a public platform.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#004225" stroke-width="1.4"/></svg>
-          <div><h4>Structuring experience</h4><p>Significant real estate finance experience applied to complex and non-standard transactions.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="close" id="contact">
-    <div class="wrap">
-      <div class="reveal">
-        <h2>Let's discuss your transaction.</h2>
-        <p>Whether it's a straightforward bridge or a complex whole-loan structure, our team can talk through what's possible — directly and discreetly.</p>
-      </div>
-      <div class="contact-card reveal">
-        <span class="eyebrow">Get in touch</span>
-        <a class="email" href="mailto:jatin@kenzacapital.co.uk">funding@kenzacapital.co.uk</a>
-        <p>Kenza Capital<br>London, United Kingdom</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#top" class="brand" style="color:var(--white);">
-          <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAD9CAYAAACCy/pMAADhKklEQVR42uz9d7hl2VUfiv7GXGvvkyuc6qrqquoclCUkkIgCBL5gskkSl2gThAx8FjaPaBMECIy5XJIJFphsHiBhMhgw[...]
-          Kenza Capital
-        </a>
-        <p>Bespoke private capital for UK and international real estate transactions.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Capital</h5>
-        <ul>
-          <li><a href="#solutions">Whole Loan</a></li>
-          <li><a href="#solutions">Mezzanine</a></li>
-          <li><a href="#solutions">Bridge</a></li>
-          <li><a href="#solutions">Stabilisation &amp; Exit</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Kenza Capital</h5>
-        <ul>
-          <li><a href="#company">About</a></li>
+      <a href="#top" class="brand">
+        <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/>
+          <text x="20" y="26" font-size="20" font-weight="600" text-anchor="middle" fill="currentColor" font-family="var(--serif)">K</text>
+        </svg>
+        Kenza Capital
+      </a>
+      <nav class="primary-nav">
+        <ul class="nav-links-inline">
+          <li><a href="#solutions">Capital Solutions</a></li>
           <li><a href="#approach">Approach</a></li>
           <li><a href="#why">Why Kenza</a></li>
+          <li><a href="#company">Company</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-legal">This website is provided for general information purposes only. It does not constitute a financial promotion, offer, solicitation or invitation, and nothing on this [...]
-      <p class="footer-copy">© 2026 Kenza Capital. All rights reserved.</p>
-    </div>
+  </header>
+
+  <div class="mobile-panel" id="mobilePanel">
+    <button class="close-x" id="closePanel" aria-label="Close menu">&times;</button>
+    <a href="#solutions">Capital Solutions</a>
+    <a href="#approach">Approach</a>
+    <a href="#why">Why Kenza</a>
+    <a href="#company">Company</a>
+    <a href="#contact">Contact</a>
   </div>
-</footer>
 
-<script>
-  // Header scroll state
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
+  <main id="top">
+    <section class="hero">
+      <svg class="hero-arch" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M120 560 V260 A180 180 0 0 1 480 260 V560" stroke="#E3DCD2" stroke-opacity="0.16" stroke-width="1"/>
+        <path d="M170 560 V260 A130 130 0 0 1 430 260 V560" stroke="#E3DCD2" stroke-opacity="0.22" stroke-width="1"/>
+        <path d="M220 560 V262 A80 80 0 0 1 380 262 V560" stroke="#004225" stroke-opacity="0.55" stroke-width="1.4"/>
+        <line x1="300" y1="180" x2="300" y2="560" stroke="#E3DCD2" stroke-opacity="0.1" stroke-width="1"/>
+        <circle cx="300" cy="182" r="3" fill="#E3DCD2" fill-opacity="0.4"/>
+      </svg>
+      <div class="wrap">
+        <span class="eyebrow hero-eyebrow">Private Capital for Real Estate</span>
+        <h1 class="hero-head">Structured finance<br>for real estate.</h1>
+        <p class="hero-sub">Kenza combines institutional senior funding with flexible family office and private capital — structured for certainty of execution on UK and international transactions.</p>
+      </div>
+      <div class="hero-scroll"><span>Our Approach</span><span class="stem"></span></div>
+    </section>
 
-  // Mobile menu
-  const menuToggle = document.getElementById('menuToggle');
-  const mobilePanel = document.getElementById('mobilePanel');
-  const closePanel = document.getElementById('closePanel');
-  function openMenu(){ mobilePanel.classList.add('open'); menuToggle.setAttribute('aria-expanded','true'); }
-  function closeMenu(){ mobilePanel.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); }
-  menuToggle.addEventListener('click', openMenu);
-  closePanel.addEventListener('click', closeMenu);
-  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    <section class="positioning" id="company">
+      <div class="wrap">
+        <div class="quote-col reveal">
+          <div class="rule"></div>
+          <blockquote>Private banking discipline, applied to real estate.</blockquote>
+        </div>
+        <div class="body-col reveal">
+          <p>Kenza is a specialist private capital business built around <strong>complex, non-standard and time-sensitive</strong> real estate transactions. We work closely with institutional lenders, family offices and private capital partners to structure whole-loan solutions.</p>
+          <p>Our team brings significant real estate finance and structuring experience to every transaction. We operate quietly and directly — relationship-led rather than platform-led, and built for certainty of execution.</p>
+        </div>
+      </div>
+    </section>
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-    revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('is-visible'));
-  }
-</script>
+    <section class="solutions" id="solutions">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="reveal">
+            <span class="eyebrow">Capital Solutions</span>
+            <h2>Structured across the capital stack.</h2>
+          </div>
+          <p class="reveal">Each solution can stand alone or combine into a single whole-loan facility — matched to the shape, timeline and complexity of the transaction.</p>
+        </div>
+        <div class="solutions-grid reveal">
+          <div class="solution-card">
+            <svg class="icon" viewBox="0 0 40 40" fill="none">
+              <path d="M12 32V12L20 20V32" stroke="#004225" stroke-width="1.4"/>
+              <path d="M28 32V12L20 20" stroke="#0A192F" stroke-width="1.4"/>
+            </svg>
+            <h3>Whole Loan</h3>
+            <p>A single, unified facility combining senior and junior debt — structured to support larger and more complex schemes without layered lenders.</p>
+            <span class="tag">Senior + Junior</span>
+          </div>
+          <div class="solution-card">
+            <svg class="icon" viewBox="0 0 40 40" fill="none">
+              <rect x="10" y="10" width="20" height="20" stroke="#004225" stroke-width="1.4"/>
+              <line x1="10" y1="20" x2="30" y2="20" stroke="#0A192F" stroke-width="1.4"/>
+            </svg>
+            <h3>Mezzanine</h3>
+            <p>Flexible top-up capital positioned behind senior debt — reducing the equity contribution required while preserving control of the transaction.</p>
+            <span class="tag">Top-up Capital</span>
+          </div>
+          <div class="solution-card">
+            <svg class="icon" viewBox="0 0 40 40" fill="none">
+              <path d="M10 30 L20 10 L30 30" stroke="#004225" stroke-width="1.4" stroke-linejoin="round"/>
+              <line x1="14" y1="22" x2="26" y2="22" stroke="#0A192F" stroke-width="1.4"/>
+            </svg>
+            <h3>Bridge</h3>
+            <p>Short-term senior and junior funding for acquisition, refinancing or conversion — structured for pace as much as precision.</p>
+            <span class="tag">Short-term</span>
+          </div>
+          <div class="solution-card">
+            <svg class="icon" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="10" stroke="#004225" stroke-width="1.4"/>
+              <path d="M20 14V20L24 24" stroke="#0A192F" stroke-width="1.4"/>
+            </svg>
+            <h3>Stabilisation &amp; Exit</h3>
+            <p>Capital for completed or near-complete schemes that need time and structure to optimise value ahead of refinancing or sale.</p>
+            <span class="tag">Finish &amp; Exit</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="approach" id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="reveal">
+            <span class="eyebrow">How We Work</span>
+            <h2>A direct, disciplined process.</h2>
+          </div>
+          <p class="reveal">Four stages, one point of accountability — from the first conversation to a completed transaction.</p>
+        </div>
+        <div class="stages reveal">
+          <div class="stage">
+            <span class="num">01</span>
+            <h4>Origination</h4>
+            <p>Direct, relationship-led conversations with developers, sponsors and advisers.</p>
+          </div>
+          <div class="stage">
+            <span class="num">02</span>
+            <h4>Structuring</h4>
+            <p>Combining institutional and private capital into a single, whole-loan solution.</p>
+          </div>
+          <div class="stage">
+            <span class="num">03</span>
+            <h4>Execution</h4>
+            <p>Decisive underwriting, built for complex and time-sensitive transactions.</p>
+          </div>
+          <div class="stage">
+            <span class="num">04</span>
+            <h4>Delivery</h4>
+            <p>Hands-on oversight through to completion, with discretion throughout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow" style="color: var(--green); display: block; margin-bottom: 18px;">Why Kenza</span>
+          <h2 style="font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 38px); line-height: 1.2; color: var(--navy);">Quiet confidence, not visual noise.</h2>
+        </div>
+        <div class="why-list reveal">
+          <div class="why-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="8" stroke="#004225" stroke-width="1.4"/>
+              <path d="M9 12l2 2 4-4" stroke="#004225" stroke-width="1.4"/>
+            </svg>
+            <div>
+              <h4>Certainty of execution</h4>
+              <p>A single point of accountability, structured to remove complexity rather than add to it.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <path d="M4 18V6h16v12" stroke="#004225" stroke-width="1.4"/>
+              <path d="M4 18h16" stroke="#0A192F" stroke-width="1.4"/>
+            </svg>
+            <div>
+              <h4>Institutional and private capital, combined</h4>
+              <p>Senior institutional funding alongside flexible family office and private capital, in one facility.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke="#004225" stroke-width="1.4"/>
+            </svg>
+            <div>
+              <h4>Relationship-led, discreet</h4>
+              <p>We work directly with developers, sponsors and advisers — not through a public platform.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <path d="M4 20V10M12 20V4M20 20v-7" stroke="#004225" stroke-width="1.4"/>
+            </svg>
+            <div>
+              <h4>Structuring experience</h4>
+              <p>Significant real estate finance experience applied to complex and non-standard transactions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="close" id="contact">
+      <div class="wrap">
+        <div class="reveal">
+          <h2>Let's discuss your transaction.</h2>
+          <p>Whether it's a straightforward bridge or a complex whole-loan structure, our team can talk through what's possible — directly and discreetly.</p>
+        </div>
+        <div class="contact-card reveal">
+          <span class="eyebrow">Get in touch</span>
+          <a class="email" href="mailto:funding@kenzacapital.co.uk">funding@kenzacapital.co.uk</a>
+          <p>Kenza Capital<br>London, United Kingdom</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="brand" style="color: var(--white);">
+            <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/>
+              <text x="20" y="26" font-size="20" font-weight="600" text-anchor="middle" fill="currentColor" font-family="var(--serif)">K</text>
+            </svg>
+            Kenza Capital
+          </a>
+          <p>Bespoke private capital for UK and international real estate transactions.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Capital</h5>
+          <ul>
+            <li><a href="#solutions">Whole Loan</a></li>
+            <li><a href="#solutions">Mezzanine</a></li>
+            <li><a href="#solutions">Bridge</a></li>
+            <li><a href="#solutions">Stabilisation &amp; Exit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kenza Capital</h5>
+          <ul>
+            <li><a href="#company">About</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#why">Why Kenza</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">This website is provided for general information purposes only. It does not constitute a financial promotion, offer, solicitation or invitation, and nothing on this website should be relied upon for any investment decision.</p>
+        <p class="footer-copy">© 2026 Kenza Capital. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll state
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobilePanel = document.getElementById('mobilePanel');
+    const closePanel = document.getElementById('closePanel');
+    function openMenu() {
+      mobilePanel.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu() {
+      mobilePanel.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+    menuToggle.addEventListener('click', openMenu);
+    closePanel.addEventListener('click', closeMenu);
+    mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
 </body>
 </html>
